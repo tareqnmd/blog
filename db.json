@@ -1,0 +1,116 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Getting Started with Next.js 15",
+      "slug": "getting-started-with-nextjs-15",
+      "content": "Next.js 15 brings exciting new features including the App Router...",
+      "coverImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+      "categoryId": "1",
+      "category": {
+        "id": "1",
+        "name": "Development",
+        "icon": "💻"
+      },
+      "author": {
+        "id": "u1",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "role": "ADMIN"
+      },
+      "tags": "nextjs,react,web-dev",
+      "views": 1205,
+      "likes": 45,
+      "status": "PUBLISHED",
+      "isFeatured": true,
+      "publishedAt": "2025-11-20T10:00:00Z",
+      "createdAt": "2025-11-19T09:00:00Z",
+      "updatedAt": "2025-11-20T10:00:00Z",
+      "metaDescription": "Learn how to get started with the latest version of Next.js and explore its new features."
+    },
+    {
+      "id": "2",
+      "title": "The Future of Web Design",
+      "slug": "future-of-web-design",
+      "content": "Web design is evolving rapidly with AI and new CSS features...",
+      "coverImage": "https://images.unsplash.com/photo-1507238691140-d94cf851527b?w=800&q=80",
+      "categoryId": "2",
+      "category": {
+        "id": "2",
+        "name": "Design",
+        "icon": "🎨"
+      },
+      "author": {
+        "id": "u2",
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "role": "WRITER"
+      },
+      "tags": "design,ui,ux",
+      "views": 850,
+      "likes": 32,
+      "status": "PUBLISHED",
+      "publishedAt": "2025-11-21T14:30:00Z",
+      "createdAt": "2025-11-20T11:00:00Z",
+      "updatedAt": "2025-11-21T14:30:00Z",
+      "metaDescription": "Explore upcoming trends in web design and how they will shape the internet."
+    },
+    {
+      "id": "3",
+      "title": "Mastering TypeScript Generics",
+      "slug": "mastering-typescript-generics",
+      "content": "Generics are a powerful feature in TypeScript that allow...",
+      "coverImage": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80",
+      "categoryId": "1",
+      "category": {
+        "id": "1",
+        "name": "Development",
+        "icon": "💻"
+      },
+      "author": {
+        "id": "u1",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "role": "ADMIN"
+      },
+      "tags": "typescript,javascript,coding",
+      "views": 2100,
+      "likes": 120,
+      "status": "PUBLISHED",
+      "publishedAt": "2025-11-15T08:15:00Z",
+      "createdAt": "2025-11-14T16:00:00Z",
+      "updatedAt": "2025-11-15T08:15:00Z",
+      "metaDescription": "A deep dive into TypeScript generics and how to use them effectively in your projects."
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Development",
+      "description": "Programming, coding, and software engineering",
+      "icon": "💻",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "2",
+      "name": "Design",
+      "description": "UI/UX, graphic design, and art",
+      "icon": "🎨",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "3",
+      "name": "Lifestyle",
+      "description": "Health, travel, and daily life",
+      "icon": "🌟",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "4",
+      "name": "Technology",
+      "description": "Gadgets, AI, and tech news",
+      "icon": "📱",
+      "status": "ACTIVE"
+    }
+  ]
+}
