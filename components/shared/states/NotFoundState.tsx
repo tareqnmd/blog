@@ -1,7 +1,7 @@
 import Button from '@/components/ui/Button';
 import { Routes } from '@/enum';
 import Link from 'next/link';
-import { RiHome4Line, RiMapPinLine } from 'react-icons/ri';
+import { RiHome4Line } from 'react-icons/ri';
 
 interface NotFoundStateProps {
   title?: string;
@@ -21,12 +21,8 @@ const NotFoundState = ({
       <div className="w-full max-w-md text-center">
         <div className="mb-8 flex justify-center">
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-accent/20 blur-xl" />
             <div className="relative text-9xl font-black text-accent opacity-20 select-none">
               404
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <RiMapPinLine className="h-16 w-16 text-accent" />
             </div>
           </div>
         </div>

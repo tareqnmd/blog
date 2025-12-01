@@ -51,7 +51,7 @@ const CustomSelect = ({
     <div className={`relative ${className}`} ref={containerRef}>
       <button
         onClick={() => !loading && setIsOpen(!isOpen)}
-        className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border bg-background text-foreground transition-all ${
+        className={`w-full flex items-center justify-between px-4 py-3 rounded-xl border text-foreground transition-all ${
           isOpen ? 'border-accent ring-2 ring-accent/20' : 'border-border hover:border-accent/50'
         } ${loading ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'}`}
         type="button"

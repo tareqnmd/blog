@@ -10,7 +10,6 @@ const Error = ({ error, reset }: { error: Error & { digest?: string }; reset: ()
         description={
           error.message || 'We encountered an unexpected error. Our team has been notified.'
         }
-        errorDetails={process.env.NODE_ENV === 'development' ? error.stack : undefined}
       />
     </main>
   );

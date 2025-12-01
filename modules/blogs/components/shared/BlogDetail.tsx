@@ -2,12 +2,10 @@
 import { motion } from 'framer-motion';
 import { BlogField } from '../../blog.enum';
 import { IBlog } from '../../blog.type';
+import BlogBack from './BlogBack';
 import BlogContent from './BlogContent';
-import BlogCoverImage from './BlogCoverImage';
+import BlogFooter from './BlogFooter';
 import BlogHeader from './BlogHeader';
-import BlogLikeShare from './BlogLikeShare';
-import BlogTags from './BlogTags';
-import BlogTitle from './BlogTitle';
 
 const BlogDetail = ({ blog }: { blog: IBlog }) => {
   return (
@@ -15,17 +13,15 @@ const BlogDetail = ({ blog }: { blog: IBlog }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="grid gap-4 md:gap-6"
+      className="grid py-8 md:py-12 gap-4 md:gap-6 max-w-4xl container"
     >
-      <BlogCoverImage title={blog[BlogField.TITLE]} imageUrl={blog[BlogField.COVER_IMAGE]} />
-      <BlogTitle title={blog[BlogField.TITLE]} />
+      <BlogBack />
       <BlogHeader blog={blog} />
-      <BlogLikeShare blog={blog} />
       <BlogContent
         content={blog[BlogField.CONTENT]}
         description={blog[BlogField.META_DESCRIPTION]}
       />
-      <BlogTags tags={blog[BlogField.TAGS]} />
+      <BlogFooter blog={blog} />
     </motion.article>
   );
 };

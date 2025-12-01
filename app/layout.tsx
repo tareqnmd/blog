@@ -5,9 +5,9 @@ import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib';
 import Analytics from '@/modules/analytics/components/Analytics';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 
-const font = Poppins({
+const font = Nunito_Sans({
   variable: '--font',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],

@@ -31,7 +31,7 @@ const EditBlog = () => {
   };
 
   if (isLoading) {
-    return <LoadingState message="Loading blog..." />;
+    return <LoadingState />;
   }
 
   if (error || !blog) {

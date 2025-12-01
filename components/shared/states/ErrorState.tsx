@@ -3,21 +3,17 @@ import { Routes } from '@/enum';
 import Link from 'next/link';
 import { RiErrorWarningLine, RiHome4Line, RiRefreshLine } from 'react-icons/ri';
 
-interface ErrorStateProps {
-  title?: string;
-  description?: string;
-  retry?: () => void;
-  showHomeButton?: boolean;
-  errorDetails?: string;
-}
-
 const ErrorState = ({
   title = 'Something went wrong',
   description = 'We encountered an unexpected error. Our team has been notified.',
   retry,
   showHomeButton = true,
-  errorDetails,
-}: ErrorStateProps) => {
+}: {
+  title?: string;
+  description?: string;
+  retry?: () => void;
+  showHomeButton?: boolean;
+}) => {
   return (
     <div className="grid min-h-[calc(100vh-8rem)] place-items-center p-4">
       <div className="w-full max-w-md text-center">
@@ -42,7 +38,6 @@ const ErrorState = ({
               Try Again
             </Button>
           )}
-
           {showHomeButton && (
             <Link href={Routes.HOME}>
               <Button variant="outline" icon={<RiHome4Line className="text-xl" />}>
@@ -51,17 +46,6 @@ const ErrorState = ({
             </Link>
           )}
         </div>
-
-        {errorDetails && (
-          <div className="mt-12 overflow-hidden rounded-lg bg-red-500/5 text-left border border-red-500/10">
-            <div className="bg-red-500/10 px-4 py-2 text-xs font-semibold text-red-600 uppercase tracking-wider">
-              Error Details
-            </div>
-            <pre className="p-4 overflow-auto text-xs text-red-600/80 font-mono">
-              {errorDetails}
-            </pre>
-          </div>
-        )}
       </div>
     </div>
   );

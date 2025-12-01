@@ -78,12 +78,12 @@ const BlogShare = ({
               type="text"
               value={link}
               readOnly
-              className="flex-1 border-none bg-transparent text-sm outline-none"
+              className="flex-1 border-none bg-transparent text-sm outline-none select-none"
             />
             <button
               onClick={handleCopyLink}
               className={cn(
-                'bg-primary flex items-center gap-1.5 rounded-md p-2 text-sm font-medium text-white transition-all'
+                'flex items-center gap-1.5 rounded-md p-2 text-sm font-medium  transition-all'
               )}
               title="Copy link"
             >

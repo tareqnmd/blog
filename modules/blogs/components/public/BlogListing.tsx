@@ -36,7 +36,7 @@ const BlogListing = ({
   };
 
   return (
-    <div className="container max-w-7xl mx-auto px-4 py-12 min-h-screen">
+    <div className="container max-w-7xl mx-auto px-4 py-12">
       <div className="mb-12 space-y-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -56,7 +56,7 @@ const BlogListing = ({
               placeholder="Search articles..."
               value={params[BlogField.TITLE]}
               onChange={titleChangeHandler}
-              className="w-full pl-12 pr-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
+              className="w-full pl-12 pr-4 py-3 rounded-xl border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
             />
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted"

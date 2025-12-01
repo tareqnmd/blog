@@ -7,7 +7,7 @@ interface BlogCoverImageProps {
 
 const BlogCoverImage = ({ title, imageUrl }: BlogCoverImageProps) => {
   return (
-    <div className="relative aspect-video w-full overflow-hidden">
+    <div className="relative aspect-video w-full overflow-hidden rounded-md">
       <Image
         width={1000}
         height={1000}
