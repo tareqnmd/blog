@@ -70,24 +70,19 @@ const AdminBlogs = () => {
   const getStatusBadge = (status: BlogStatus) => {
     const statusConfig = {
       [BlogStatus.PUBLISHED]: {
-        className: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
         label: 'Published',
       },
       [BlogStatus.DRAFT]: {
-        className: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
         label: 'Draft',
       },
       [BlogStatus.ARCHIVED]: {
-        className: 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400',
         label: 'Archived',
       },
     };
 
     const config = statusConfig[status];
     return (
-      <span
-        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${config.className}`}
-      >
+      <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full `}>
         {config.label}
       </span>
     );
@@ -121,17 +116,13 @@ const AdminBlogs = () => {
       header: 'Category',
       accessorKey: BlogField.CATEGORY,
       cell: (blog) => (
-        <div className="text-sm text-foreground">
-          {blog[BlogField.CATEGORY]?.name || 'Uncategorized'}
-        </div>
+        <div className="text-sm">{blog[BlogField.CATEGORY]?.name || 'Uncategorized'}</div>
       ),
     },
     {
       header: 'Author',
       accessorKey: BlogField.AUTHOR,
-      cell: (blog) => (
-        <div className="text-sm text-foreground">{blog[BlogField.AUTHOR]?.name || 'Unknown'}</div>
-      ),
+      cell: (blog) => <div className="text-sm">{blog[BlogField.AUTHOR]?.name || 'Unknown'}</div>,
     },
     {
       header: 'Status',
@@ -148,36 +139,30 @@ const AdminBlogs = () => {
     {
       header: 'Featured',
       accessorKey: BlogField.IS_FEATURED,
-      cell: (blog) => (
-        <span className="text-sm text-foreground">
-          {blog[BlogField.IS_FEATURED] ? 'Yes' : 'No'}
-        </span>
-      ),
+      cell: (blog) => <span className="text-sm">{blog[BlogField.IS_FEATURED] ? 'Yes' : 'No'}</span>,
     },
     {
       header: 'Views',
       accessorKey: BlogField.VIEWS,
       cell: (blog) => (
-        <div className="flex items-center gap-1 text-sm text-muted">
-          {blog[BlogField.VIEWS] || 0}
-        </div>
+        <div className="flex items-center gap-1 text-sm">{blog[BlogField.VIEWS] || 0}</div>
       ),
     },
     {
       header: 'Created',
       accessorKey: BlogField.CREATED_AT,
       cell: (blog) => (
-        <div className="text-sm text-muted">{formatDate(new Date(blog[BlogField.CREATED_AT]))}</div>
+        <div className="text-sm">{formatDate(new Date(blog[BlogField.CREATED_AT]))}</div>
       ),
     },
     {
       header: 'Actions',
       className: 'text-right text-sm font-medium',
       cell: (blog) => (
-        <div className="flex justify-end gap-1">
+        <div className="flex justify-end items-center gap-2">
           <Link
             href={`${Routes.ADMIN_BLOGS}/${blog[BlogField.SLUG]}`}
-            className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 p-2 rounded hover:bg-blue-50 dark:hover:bg-blue-900/20"
+            className="text-blue-600 hover:text-blue-900"
             title="View blog"
           >
             <FiEye size={18} />
@@ -185,7 +170,7 @@ const AdminBlogs = () => {
           {blog[BlogField.STATUS] !== BlogStatus.PUBLISHED && (
             <button
               onClick={() => handlePublish(blog)}
-              className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300 p-2 rounded hover:bg-green-50 dark:hover:bg-green-900/20"
+              className="text-green-600 hover:text-green-900 cursor-pointer"
               title="Publish blog"
             >
               <FiUpload size={18} />
@@ -193,14 +178,14 @@ const AdminBlogs = () => {
           )}
           <Link
             href={`${Routes.ADMIN_BLOGS_EDIT}/${blog[BlogField.ID]}`}
-            className="text-blue-600 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 p-2 rounded hover:bg-blue-50 dark:hover:bg-blue-900/20"
+            className="text-blue-600 hover:text-blue-900"
             title="Edit blog"
           >
             <FiEdit2 size={18} />
           </Link>
           <button
             onClick={() => handleDelete(blog[BlogField.ID])}
-            className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300 p-2 rounded hover:bg-red-50 dark:hover:bg-red-900/20"
+            className="text-red-600 hover:text-red-900 cursor-pointer"
             title="Delete blog"
           >
             <FiTrash2 size={18} />
