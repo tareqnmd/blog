@@ -6,14 +6,18 @@ import { use } from 'react';
 export const dynamic = 'force-dynamic';
 
 async function getBlogs() {
-  const res = await blogService.getBlogs(
-    new URLSearchParams({
-      limit: '6',
-      status: BlogStatus.PUBLISHED,
-      sort: '-createdAt',
-    })
-  );
-  return res?.data ?? [];
+  try {
+    const res = await blogService.getBlogs(
+      new URLSearchParams({
+        limit: '6',
+        status: BlogStatus.PUBLISHED,
+        sort: '-createdAt',
+      })
+    );
+    return res?.data ?? [];
+  } catch {
+    return [];
+  }
 }
 
 const BlogsSection = () => {

@@ -6,12 +6,16 @@ import { use } from 'react';
 export const dynamic = 'force-dynamic';
 
 async function getCategories() {
-  const searchParams = new URLSearchParams({
-    status: CategoryStatus.ACTIVE,
-    sort: '-createdAt',
-  });
-  const res = await categoryService.getCategories(searchParams);
-  return res?.data ?? [];
+  try {
+    const searchParams = new URLSearchParams({
+      status: CategoryStatus.ACTIVE,
+      sort: '-createdAt',
+    });
+    const res = await categoryService.getCategories(searchParams);
+    return res?.data ?? [];
+  } catch {
+    return [];
+  }
 }
 
 const CategoriesSection = () => {
