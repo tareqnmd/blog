@@ -10,7 +10,7 @@ import BlogShare from './BlogShare';
 const BlogInfo = ({ blog, cardView = false }: { blog: IBlog; cardView?: boolean }) => {
   return (
     <div className="flex items-center gap-8 text-sm">
-      <div className="flex items-center gap-x-4 gap-y-2 flex-wrap">
+      <div className="flex items-center gap-x-4 gap-y-2 flex-wrap text-muted">
         <div className="flex items-center gap-1">
           <Image
             src={blog[BlogField.AUTHOR][UserField.IMAGE] || '/images/placeholder.jpg'}
