@@ -14,7 +14,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!blog) {
     redirect(Routes.ADMIN_BLOGS);
   }
-  return <BlogDetail blog={blog} />;
+  return <BlogDetail blog={blog} incrementView={false} />;
 };
 
 export default Page;
