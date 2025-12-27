@@ -20,7 +20,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
     >
       <Link
         href={`${Routes.BLOGS}/${blog[BlogField.SLUG]}`}
-        className="flex flex-col h-full relative"
+        className="grid grid-rows-[auto_1fr] flex-col h-full relative"
       >
         <Image
           src={blog[BlogField.COVER_IMAGE] || '/images/placeholder.jpg'}
@@ -30,7 +30,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
           className="object-cover"
         />
         <BlogCategoryBadge className="absolute top-4 left-4" category={blog[BlogField.CATEGORY]} />
-        <div className="p-4 flex flex-col gap-2">
+        <div className="p-4 grid grid-rows-[1fr_auto] gap-2">
           <h3 className="text-xl font-bold group-hover:text-accent line-clamp-2 leading-tight">
             {blog[BlogField.TITLE]}
           </h3>
@@ -38,8 +38,10 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
             dangerouslySetInnerHTML={{ __html: blog[BlogField.CONTENT] || 'Read more...' }}
             className="text-muted text-sm line-clamp-2 leading-relaxed"
           ></p>
-          <hr className="border-border/50 my-1" />
-          <BlogInfo cardView blog={blog} hideShare={true} />
+          <div className="flex flex-col gap-2">
+            <hr className="border-border/50 my-1 mt-auto" />
+            <BlogInfo cardView blog={blog} hideShare={true} />
+          </div>
         </div>
       </Link>
     </motion.article>

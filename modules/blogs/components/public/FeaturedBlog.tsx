@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { BlogField } from '../../blog.enum';
 import { IBlog } from '../../blog.type';
 import BlogInfo from '../shared/BlogInfo';
+import BlogTitle from '../shared/BlogTitle';
 import BlogCategory from './BlogCategoryBadge';
 
 const FeaturedBlog = ({ blog }: { blog: IBlog }) => {
@@ -38,6 +39,7 @@ const FeaturedBlog = ({ blog }: { blog: IBlog }) => {
                     className="flex flex-col gap-4"
                   >
                     <BlogCategory category={blog[BlogField.CATEGORY]} />
+                    <BlogTitle className="group-hover:text-accent" title={blog[BlogField.TITLE]} />
                     <BlogInfo blog={blog} hideShare={true} />
                   </motion.div>
                 </div>
