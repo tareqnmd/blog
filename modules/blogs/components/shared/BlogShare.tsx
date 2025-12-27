@@ -2,8 +2,7 @@
 import Modal from '@/components/ui/Modal';
 import { cn } from '@/lib';
 import { useState } from 'react';
-import { BsShare } from 'react-icons/bs';
-import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaShare, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { IoCheckmark, IoCopyOutline } from 'react-icons/io5';
 import { toast } from 'sonner';
 
@@ -12,7 +11,6 @@ const BlogShare = ({
   link,
   className,
   iconSize = 16,
-  shareBtnTitle = 'Share',
 }: {
   title?: string;
   link: string;
@@ -61,12 +59,11 @@ const BlogShare = ({
         title={`Share this content: ${link}`}
         className={cn('flex cursor-pointer items-center gap-2', className)}
       >
-        <BsShare size={iconSize} title="Share icon" />
-        <span className="text-sm font-medium">{shareBtnTitle}</span>
+        <FaShare size={iconSize} title="Share icon" />
       </div>
       <Modal
         onOpenChange={closeModal}
-        title={<div className="mt-4 text-lg font-semibold">Share {title}</div>}
+        title={<div className="mt-4 text-lg font-semibold">Share: {title}</div>}
         open={open}
         footer={null}
         size="md"

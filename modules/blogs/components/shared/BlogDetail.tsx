@@ -13,14 +13,11 @@ const BlogDetail = ({ blog }: { blog: IBlog }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="grid py-8 md:py-12 gap-4 md:gap-6 max-w-4xl container"
+      className="grid py-4 sm:py-8 md:py-12 gap-4 md:gap-6 max-w-4xl container"
     >
       <BlogBack />
       <BlogHeader blog={blog} />
-      <BlogContent
-        content={blog[BlogField.CONTENT]}
-        description={blog[BlogField.META_DESCRIPTION]}
-      />
+      <BlogContent content={blog[BlogField.CONTENT]} />
       <BlogFooter blog={blog} />
     </motion.article>
   );
