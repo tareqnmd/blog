@@ -19,7 +19,7 @@ const FeaturedBlog = ({ blog }: { blog: IBlog }) => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="group relative"
           >
-            <div className="relative overflow-hidden rounded-xl bg-card-background border border-border transition-all duration-500">
+            <div className="relative overflow-hidden rounded-xl bg-card-background transition-all duration-500">
               <div className="flex flex-col lg:grid lg:grid-cols-2">
                 <div className="relative h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
                   <motion.img

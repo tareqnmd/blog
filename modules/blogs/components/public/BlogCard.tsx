@@ -16,7 +16,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
       viewport={{ once: true }}
       whileHover={{ y: -1 }}
       transition={{ duration: 0.1 }}
-      className="group h-full bg-card-background rounded-2xl overflow-hidden hover:shadow transition-all border border-border"
+      className="group h-full bg-card-background rounded-2xl overflow-hidden hover:shadow transition-all"
     >
       <Link
         href={`${Routes.BLOGS}/${blog[BlogField.SLUG]}`}
