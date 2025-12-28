@@ -3,49 +3,87 @@ import { Skeleton } from '@/components/ui/Skeleton';
 const AdminBlogsLoading = () => {
   return (
     <div className="grid gap-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="space-y-2">
-          <Skeleton className="h-8 w-32" />
-          <Skeleton className="h-5 w-64" />
+      <div className="flex items-center justify-between gap-4 flex-wrap">
+        <div>
+          <Skeleton className="h-8 w-24" />
+          <Skeleton className="h-5 w-64 mt-1" />
         </div>
         <Skeleton className="h-10 w-32 rounded-lg" />
       </div>
 
-      <div className="rounded-xl bg-card-background border border-border overflow-hidden">
-        <div className="grid grid-cols-[80px_1fr_120px_100px_80px_80px_80px_100px_120px] gap-4 p-4 border-b border-border bg-muted/10">
-          <Skeleton className="h-4 w-12" />
-          <Skeleton className="h-4 w-16" />
-          <Skeleton className="h-4 w-20" />
-          <Skeleton className="h-4 w-16" />
-          <Skeleton className="h-4 w-14" />
-          <Skeleton className="h-4 w-16" />
-          <Skeleton className="h-4 w-12" />
-          <Skeleton className="h-4 w-16" />
-          <Skeleton className="h-4 w-16" />
+      <div className="bg-background rounded-lg shadow overflow-hidden w-full">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-border">
+            <thead className="bg-card-background">
+              <tr>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-12" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-12" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-20" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-16" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-14" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-16" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-12" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-16" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-16" />
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-background divide-y divide-border">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <tr key={i}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-12 w-16 rounded-lg" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-5 w-full max-w-[200px]" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-4 w-20" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-4 w-16" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-6 w-16 rounded-full" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-4 w-8" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-4 w-10" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-4 w-20" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex justify-end items-center gap-2">
+                      <Skeleton className="h-5 w-5 rounded" />
+                      <Skeleton className="h-5 w-5 rounded" />
+                      <Skeleton className="h-5 w-5 rounded" />
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={i}
-            className="grid grid-cols-[80px_1fr_120px_100px_80px_80px_80px_100px_120px] gap-4 p-4 border-b border-border last:border-b-0 items-center"
-          >
-            <Skeleton className="h-12 w-16 rounded-lg" />
-            <div className="space-y-1.5">
-              <Skeleton className="h-5 w-full max-w-[200px]" />
-            </div>
-            <Skeleton className="h-4 w-20" />
-            <Skeleton className="h-4 w-16" />
-            <Skeleton className="h-6 w-16 rounded-full" />
-            <Skeleton className="h-4 w-8" />
-            <Skeleton className="h-4 w-10" />
-            <Skeleton className="h-4 w-20" />
-            <div className="flex justify-end gap-2">
-              <Skeleton className="h-5 w-5 rounded" />
-              <Skeleton className="h-5 w-5 rounded" />
-              <Skeleton className="h-5 w-5 rounded" />
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );

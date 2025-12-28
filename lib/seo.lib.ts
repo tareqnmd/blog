@@ -12,7 +12,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',
-      email: 'contact@beejoyi.com',
+      email: `tareqnmd@gmail.com`,
     },
   };
 }
@@ -26,7 +26,7 @@ export function generateWebsiteSchema() {
     url: BASE_URL,
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${BASE_URL}/competitions?search={search_term_string}`,
+      target: `${BASE_URL}/blogs?title={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

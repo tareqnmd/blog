@@ -3,8 +3,8 @@ import BlogCardLoading from './BlogCardLoading';
 
 const BlogListingLoading = () => {
   return (
-    <div className="container max-w-7xl mx-auto px-4 py-12">
-      <div className="mb-12 space-y-8">
+    <div className="container px-4 py-12 flex flex-col gap-8">
+      <div className="space-y-8 max-w-5xl mx-auto w-full">
         <div className="text-center max-w-2xl mx-auto flex flex-col items-center gap-4">
           <Skeleton className="h-10 md:h-12 w-64 md:w-80" />
           <Skeleton className="h-6 w-full max-w-md" />
@@ -16,8 +16,8 @@ const BlogListingLoading = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {Array.from({ length: 9 }).map((_, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
+        {Array.from({ length: 8 }).map((_, i) => (
           <BlogCardLoading key={i} />
         ))}
       </div>
