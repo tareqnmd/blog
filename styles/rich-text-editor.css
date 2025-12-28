@@ -66,3 +66,8 @@
     padding: 0 !important;
   }
 }
+
+.rich-text-editor .ql-code-block-container,
+.rich-text-editor .ql-code-block {
+  font-family: var(--font-fira-code) !important;
+}

@@ -20,6 +20,7 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --font: var(--font);
+  --font-fira-code: var(--font-fira-code);
   --color-card-background: var(--card-background);
 }
 

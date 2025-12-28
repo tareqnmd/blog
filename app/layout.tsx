@@ -5,13 +5,20 @@ import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib';
 import Analytics from '@/modules/analytics/components/Analytics';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Nunito_Sans } from 'next/font/google';
+import { Fira_Code, Nunito_Sans } from 'next/font/google';
 
 const font = Nunito_Sans({
   variable: '--font',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
+});
+
+const firaCode = Fira_Code({
+  variable: '--font-fira-code',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal'],
 });
 
 export const metadata: Metadata = {
@@ -58,7 +65,7 @@ export default function RootLayout({
         <StructuredData data={[organizationSchema, websiteSchema]} />
         <Analytics />
       </head>
-      <body className={`${font.variable} antialiased`}>
+      <body className={`${font.variable} ${firaCode.variable} antialiased`}>
         <AppLayout>{children}</AppLayout>
       </body>
     </html>
