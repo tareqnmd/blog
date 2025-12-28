@@ -12,8 +12,8 @@ const Categories = ({ categories }: { categories: ICategory[] }) => {
     <section className="py-16 md:py-24 bg-primary/5">
       <div className="container flex flex-col items-center gap-8">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl md:text-4xl font-bold">Explore Blog by Categories</h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-2xl md:text-3xl font-bold">Explore Blog by Categories</h2>
+          <p className="text-muted text-base md:text-lg">
             Find your favorite topics and start reading
           </p>
         </div>
