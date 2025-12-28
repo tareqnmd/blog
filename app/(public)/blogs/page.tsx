@@ -4,7 +4,9 @@ import { CategoryStatus } from '@/modules/categories/categories.enum';
 import { blogService } from '@/service/blog.service';
 import { categoryService } from '@/service/category.service';
 import { use } from 'react';
+import { blogsMetadata } from '@/metadata';
 
+export const metadata = blogsMetadata;
 export const dynamic = 'force-dynamic';
 
 async function getCategories() {
