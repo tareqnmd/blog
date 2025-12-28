@@ -17,7 +17,7 @@ const BlogInfo = ({
   hideShare?: boolean;
 }) => {
   return (
-    <div className="flex items-center gap-8 text-sm">
+    <div className="flex items-center gap-8 text-sm justify-between">
       <div className="flex items-center gap-x-4 gap-y-2 flex-wrap text-muted">
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
@@ -54,7 +54,6 @@ const BlogInfo = ({
         <BlogShare
           title={blog[BlogField.TITLE]}
           link={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${blog[BlogField.SLUG]}`}
-          className="ml-auto"
         />
       )}
     </div>
