@@ -3,7 +3,7 @@ import { Routes } from '@/enum';
 import { Metadata } from 'next';
 
 const blogsTitle = `Blogs - ${APP_CONFIG.name}`;
-const blogsDescription = `Explore articles and tutorials on ${APP_CONFIG.name}. Discover insights, tips, and latest updates from ${APP_CONFIG.author}.`;
+const blogsDescription = `Explore blogs on ${APP_CONFIG.name}. Discover insights, tips, and latest updates from ${APP_CONFIG.author}.`;
 
 export const blogsMetadata: Metadata = {
   title: 'Blogs',

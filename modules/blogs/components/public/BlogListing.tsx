@@ -37,15 +37,15 @@ const BlogListing = ({
 
   return (
     <div className="container px-4 py-12 flex flex-col gap-8">
-      <div className="space-y-8 max-w-5xl mx-auto">
+      <div className="space-y-8 max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">All Articles</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">All Blogs</h1>
           <p className="text-muted text-lg">
-            Explore our collection of articles, tutorials, and insights.
+            Explore our collection of blogs, tutorials, and insights.
           </p>
         </motion.div>
 
@@ -53,7 +53,7 @@ const BlogListing = ({
           <div className="relative w-full md:w-96">
             <input
               type="text"
-              placeholder="Search articles..."
+              placeholder="Search blogs..."
               value={params[BlogField.TITLE]}
               onChange={titleChangeHandler}
               className="w-full pl-12 pr-4 py-3 rounded-xl border border-border/20 text-foreground focus:outline-none focus:ring-2 focus:ring-border/50 focus:border-border/50 transition-all"

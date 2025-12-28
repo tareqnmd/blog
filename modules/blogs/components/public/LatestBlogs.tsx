@@ -19,7 +19,7 @@ const LatestBlogs = ({ blogs }: { blogs: IBlog[] }) => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Latest Blogs</h2>
             <div className="h-1.5 w-24 bg-accent rounded-full" />
             <p className="text-muted text-lg max-w-2xl">
-              Stay updated with our newest articles, tutorials, and insights.
+              Stay updated with our newest blogs, tutorials, and insights.
             </p>
           </motion.div>
         </div>

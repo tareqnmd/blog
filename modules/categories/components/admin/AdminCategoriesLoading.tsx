@@ -3,37 +3,61 @@ import { Skeleton } from '@/components/ui/Skeleton';
 const AdminCategoriesLoading = () => {
   return (
     <div className="grid gap-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="space-y-2">
-          <Skeleton className="h-8 w-36" />
+      <div className="flex items-center justify-between gap-4 flex-wrap">
+        <div>
+          <Skeleton className="h-8 w-32" />
         </div>
         <Skeleton className="h-10 w-40 rounded-lg" />
       </div>
 
-      <div className="rounded-xl bg-card-background border border-border overflow-hidden">
-        <div className="grid grid-cols-[60px_1fr_1fr_100px_100px] gap-4 p-4 border-b border-border bg-muted/10">
-          <Skeleton className="h-4 w-10" />
-          <Skeleton className="h-4 w-16" />
-          <Skeleton className="h-4 w-24" />
-          <Skeleton className="h-4 w-14" />
-          <Skeleton className="h-4 w-16" />
+      <div className="bg-background rounded-lg shadow overflow-hidden w-full">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-border">
+            <thead className="bg-card-background">
+              <tr>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-10" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-16" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-24" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-14" />
+                </th>
+                <th className="px-6 py-3 text-left">
+                  <Skeleton className="h-4 w-16" />
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-background divide-y divide-border">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <tr key={i}>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-10 w-10 rounded" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-5 w-32" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-4 w-48" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <Skeleton className="h-6 w-16 rounded-full" />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex justify-end gap-2">
+                      <Skeleton className="h-8 w-8 rounded" />
+                      <Skeleton className="h-8 w-8 rounded" />
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-
-        {Array.from({ length: 5 }).map((_, i) => (
-          <div
-            key={i}
-            className="grid grid-cols-[60px_1fr_1fr_100px_100px] gap-4 p-4 border-b border-border last:border-b-0 items-center"
-          >
-            <Skeleton className="h-10 w-10 rounded" />
-            <Skeleton className="h-5 w-32" />
-            <Skeleton className="h-4 w-48" />
-            <Skeleton className="h-6 w-16 rounded-full" />
-            <div className="flex justify-end gap-2">
-              <Skeleton className="h-8 w-8 rounded" />
-              <Skeleton className="h-8 w-8 rounded" />
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );
