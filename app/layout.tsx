@@ -5,13 +5,13 @@ import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib';
 import Analytics from '@/modules/analytics/components/Analytics';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Fira_Code, Lato } from 'next/font/google';
+import { Fira_Code, Sora } from 'next/font/google';
 
-const font = Lato({
+const font = Sora({
   variable: '--font',
   subsets: ['latin'],
-  weight: ['100', '300', '400', '700', '900'],
-  style: ['normal', 'italic'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  style: ['normal'],
 });
 
 const codeFont = Fira_Code({
