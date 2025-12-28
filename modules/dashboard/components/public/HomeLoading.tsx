@@ -49,7 +49,7 @@ const HomeLoading = () => {
             {Array.from({ length: 8 }).map((_, i) => (
               <div
                 key={i}
-                className="h-full bg-card-background rounded-2xl overflow-hidden border border-border flex flex-col"
+                className="h-full bg-card-background rounded-2xl overflow-hidden flex flex-col"
               >
                 <Skeleton className="w-full aspect-square rounded-none" />
                 <div className="p-4 flex flex-col gap-4 flex-1">
