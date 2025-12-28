@@ -11,7 +11,7 @@ const SignInButton = () => {
   return (
     <button
       onClick={handleSignIn}
-      className="text-sm border border-border rounded-md px-4 py-2 cursor-pointer hover:bg-accent/10 transition-colors flex items-center gap-2"
+      className="text-sm border border-border rounded-md px-3 py-1.5 cursor-pointer hover:bg-accent/10 transition-colors flex items-center gap-2"
     >
       <FaGoogle className="text-foreground w-4 h-4" />
       <span>Sign in</span>
