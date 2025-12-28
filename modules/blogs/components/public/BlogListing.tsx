@@ -49,14 +49,14 @@ const BlogListing = ({
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-6 items-center justify-between bg-card-background border border-border rounded-2xl p-6 shadow-sm">
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-between bg-card-background rounded-2xl p-6 shadow-sm">
           <div className="relative w-full md:w-96">
             <input
               type="text"
               placeholder="Search articles..."
               value={params[BlogField.TITLE]}
               onChange={titleChangeHandler}
-              className="w-full pl-12 pr-4 py-3 rounded-xl border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
+              className="w-full pl-12 pr-4 py-3 rounded-xl border border-border/20 text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all"
             />
             <svg
               className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted"
