@@ -19,32 +19,36 @@ const BlogInfo = ({
   return (
     <div className="flex items-center gap-8 text-sm">
       <div className="flex items-center gap-x-4 gap-y-2 flex-wrap text-muted">
-        <div className="flex items-center gap-1">
-          <Image
-            src={blog[BlogField.AUTHOR][UserField.IMAGE] || '/images/placeholder.jpg'}
-            alt={blog[BlogField.AUTHOR][UserField.NAME]}
-            width={20}
-            height={20}
-            className="rounded-full"
-          />
-          <span>{blog[BlogField.AUTHOR][UserField.NAME]}</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <FiCalendar className="w-4 h-4" />
-          <span>{formatDate(new Date(blog[BlogField.PUBLISHED_AT] || ''))}</span>
-        </div>
-        {!cardView && (
+        <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
-            <FiClock className="w-4 h-4" />
-            <span>{getTimeToRead(blog[BlogField.CONTENT])}</span>
+            <Image
+              src={blog[BlogField.AUTHOR][UserField.IMAGE] || '/images/placeholder.jpg'}
+              alt={blog[BlogField.AUTHOR][UserField.NAME]}
+              width={20}
+              height={20}
+              className="rounded-full"
+            />
+            <span>{blog[BlogField.AUTHOR][UserField.NAME]}</span>
           </div>
-        )}
-        {!cardView && (
           <div className="flex items-center gap-1">
-            <FiEye className="w-4 h-4" />
-            <span>{blog[BlogField.VIEWS]}</span>
+            <FiCalendar className="w-4 h-4" />
+            <span>{formatDate(new Date(blog[BlogField.PUBLISHED_AT] || ''))}</span>
           </div>
-        )}
+        </div>
+        <div className="flex items-center gap-2">
+          {!cardView && (
+            <div className="flex items-center gap-1">
+              <FiClock className="w-4 h-4" />
+              <span>{getTimeToRead(blog[BlogField.CONTENT])}</span>
+            </div>
+          )}
+          {!cardView && (
+            <div className="flex items-center gap-1">
+              <FiEye className="w-4 h-4" />
+              <span>{blog[BlogField.VIEWS]}</span>
+            </div>
+          )}
+        </div>
       </div>
       {!hideShare && (
         <BlogShare
