@@ -12,7 +12,7 @@ const BlogCategoryBadge = ({
   return (
     <div
       className={cn(
-        'border border-primary px-4 py-1 text-sm rounded-md capitalize shadow-[3px_3px_0_0_var(--primary)] w-max bg-card-background',
+        'border border-primary px-2 py-1 text-xs rounded-md capitalize shadow-[3px_3px_0_0_var(--primary)] w-max bg-card-background',
         className
       )}
     >
