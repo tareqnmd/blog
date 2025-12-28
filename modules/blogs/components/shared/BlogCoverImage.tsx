@@ -13,7 +13,7 @@ const BlogCoverImage = ({ title, imageUrl }: BlogCoverImageProps) => {
         height={1000}
         src={imageUrl || '/images/placeholder.jpg'}
         alt={title}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover object-left"
       />
     </div>
   );

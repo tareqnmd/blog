@@ -27,7 +27,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
           alt={blog[BlogField.TITLE]}
           width={1000}
           height={1000}
-          className="object-cover"
+          className="object-cover object-left"
         />
         <BlogCategoryBadge className="absolute top-2 left-2" category={blog[BlogField.CATEGORY]} />
         <div className="p-4 grid grid-rows-[1fr_auto] gap-2">

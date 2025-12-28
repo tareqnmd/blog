@@ -27,7 +27,7 @@ const FeaturedBlog = ({ blog }: { blog: IBlog }) => {
                     transition={{ duration: 0.8 }}
                     src={blog[BlogField.COVER_IMAGE] || '/images/placeholder.jpg'}
                     alt={blog[BlogField.TITLE]}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-left"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
