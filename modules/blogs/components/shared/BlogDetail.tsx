@@ -33,6 +33,10 @@ const BlogDetail = ({ blog, incrementView = true }: { blog: IBlog; incrementView
 
     let cancelled = false;
 
+    queueMicrotask(() => {
+      if (!cancelled) setViews((v) => v + 1);
+    });
+
     (async () => {
       try {
         const res = await blogService.incrementView(blogId);
@@ -40,7 +44,11 @@ const BlogDetail = ({ blog, incrementView = true }: { blog: IBlog; incrementView
         if (!cancelled && typeof nextViews === 'number') {
           setViews(nextViews);
         }
-      } catch {}
+      } catch {
+        if (!cancelled) {
+          setViews((v) => v - 1);
+        }
+      }
     })();
 
     return () => {
