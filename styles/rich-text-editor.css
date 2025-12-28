@@ -69,5 +69,5 @@
 
 .rich-text-editor .ql-code-block-container,
 .rich-text-editor .ql-code-block {
-  font-family: var(--font-fira-code) !important;
+  font-family: var(--font-code) !important;
 }
