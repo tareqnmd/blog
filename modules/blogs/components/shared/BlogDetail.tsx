@@ -61,7 +61,7 @@ const BlogDetail = ({ blog, incrementView = true }: { blog: IBlog; incrementView
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="grid py-4 sm:py-8 md:py-12 gap-4 md:gap-6 max-w-4xl container"
+      className="grid py-4 sm:py-8 md:py-12 gap-6 md:gap-8 max-w-4xl container"
     >
       <BlogBack />
       <BlogHeader blog={blogWithViews} />
