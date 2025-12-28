@@ -31,7 +31,7 @@ const EditBlog = () => {
   };
 
   if (isLoading) {
-    return <LoadingState />;
+    return <LoadingState className="min-h-full!" />;
   }
 
   if (error || !blog) {
