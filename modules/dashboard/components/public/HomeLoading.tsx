@@ -1,4 +1,5 @@
 import { Skeleton } from '@/components/ui/Skeleton';
+import BlogCardLoading from '@/modules/blogs/components/public/BlogCardLoading';
 
 const HomeLoading = () => {
   return (
@@ -47,27 +48,7 @@ const HomeLoading = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div
-                key={i}
-                className="h-full bg-card-background rounded-2xl overflow-hidden flex flex-col"
-              >
-                <Skeleton className="w-full aspect-square rounded-none" />
-                <div className="p-4 flex flex-col gap-4 flex-1">
-                  <Skeleton className="h-6 w-24 rounded-full" />
-                  <div className="space-y-2">
-                    <Skeleton className="h-6 w-full" />
-                    <Skeleton className="h-6 w-2/3" />
-                  </div>
-                  <div className="space-y-2">
-                    <Skeleton className="h-4 w-full" />
-                    <Skeleton className="h-4 w-full" />
-                  </div>
-                  <div className="mt-auto pt-4 border-t border-border/50 flex gap-4">
-                    <Skeleton className="h-4 w-20" />
-                    <Skeleton className="h-4 w-20" />
-                  </div>
-                </div>
-              </div>
+              <BlogCardLoading key={i} />
             ))}
           </div>
         </div>
