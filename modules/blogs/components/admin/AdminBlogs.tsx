@@ -98,7 +98,7 @@ const AdminBlogs = () => {
             src={blog[BlogField.COVER_IMAGE]}
             alt={blog[BlogField.TITLE]}
             fill
-            className="object-cover"
+            className="object-cover object-left"
           />
         </div>
       ),
