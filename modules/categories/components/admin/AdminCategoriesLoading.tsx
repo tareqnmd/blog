@@ -3,7 +3,6 @@ import { Skeleton } from '@/components/ui/Skeleton';
 const AdminCategoriesLoading = () => {
   return (
     <div className="grid gap-6">
-      {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="space-y-2">
           <Skeleton className="h-8 w-36" />
@@ -11,9 +10,7 @@ const AdminCategoriesLoading = () => {
         <Skeleton className="h-10 w-40 rounded-lg" />
       </div>
 
-      {/* Table */}
       <div className="rounded-xl bg-card-background border border-border overflow-hidden">
-        {/* Table Header */}
         <div className="grid grid-cols-[60px_1fr_1fr_100px_100px] gap-4 p-4 border-b border-border bg-muted/10">
           <Skeleton className="h-4 w-10" />
           <Skeleton className="h-4 w-16" />
@@ -22,7 +19,6 @@ const AdminCategoriesLoading = () => {
           <Skeleton className="h-4 w-16" />
         </div>
 
-        {/* Table Rows */}
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}

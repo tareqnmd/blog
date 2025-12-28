@@ -3,23 +3,18 @@ import { Skeleton } from '@/components/ui/Skeleton';
 const AdminBlogDetailLoading = () => {
   return (
     <div className="grid py-8 md:py-12 gap-4 md:gap-6 max-w-4xl mx-auto">
-      {/* Back Button */}
       <Skeleton className="h-10 w-24" />
 
       <header className="flex flex-col gap-4 md:gap-6">
-        {/* Category Badge */}
         <Skeleton className="h-6 w-24 rounded-full" />
 
-        {/* Title */}
         <div className="space-y-2">
           <Skeleton className="h-10 md:h-14 w-full" />
           <Skeleton className="h-10 md:h-14 w-3/4" />
         </div>
 
-        {/* Cover Image */}
         <Skeleton className="w-full aspect-video rounded-xl" />
 
-        {/* Blog Info */}
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <Skeleton className="h-8 w-8 rounded-full" />
@@ -31,14 +26,12 @@ const AdminBlogDetailLoading = () => {
       </header>
 
       <div className="space-y-6 mt-4">
-        {/* Description */}
         <div className="space-y-3">
           <Skeleton className="h-6 w-full" />
           <Skeleton className="h-6 w-full" />
           <Skeleton className="h-6 w-2/3" />
         </div>
 
-        {/* Content Body */}
         <div className="space-y-4">
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-full" />
@@ -55,14 +48,12 @@ const AdminBlogDetailLoading = () => {
       </div>
 
       <div className="flex items-center justify-between flex-wrap gap-4 mt-8 pt-8 border-t border-border/50">
-        {/* Tags */}
         <div className="flex gap-2">
           <Skeleton className="h-8 w-20 rounded-md" />
           <Skeleton className="h-8 w-24 rounded-md" />
           <Skeleton className="h-8 w-16 rounded-md" />
         </div>
 
-        {/* Share */}
         <Skeleton className="h-10 w-32 rounded-md" />
       </div>
     </div>
