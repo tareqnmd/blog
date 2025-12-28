@@ -5,12 +5,12 @@ import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib';
 import Analytics from '@/modules/analytics/components/Analytics';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Fira_Code, Playfair_Display } from 'next/font/google';
+import { Fira_Code, Lato } from 'next/font/google';
 
-const font = Playfair_Display({
+const font = Lato({
   variable: '--font',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['100', '300', '400', '700', '900'],
   style: ['normal', 'italic'],
 });
 
