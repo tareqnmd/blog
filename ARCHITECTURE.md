@@ -196,7 +196,7 @@ Response → Cache Invalidation → UI Update
 
 ### Route Protection
 
-- **Public Routes**: `/`, `/blogs`, `/blogs/[slug]`, `/sign-in`
+- **Public Routes**: `/`, `/blogs`, `/blogs/[slug]`
 - **Protected Routes**: `/admin/*` (requires authentication)
 
 The `authorized` callback in NextAuth middleware handles route protection:

@@ -19,10 +19,6 @@ export const config = (query?: { [key: string]: string | string[] }): NextAuthCo
         },
       }),
     ],
-    pages: {
-      signIn: Routes.SIGN_IN,
-      error: Routes.SIGN_IN,
-    },
     callbacks: {
       authorized({ auth, request: { nextUrl } }) {
         const isLoggedIn = !!auth?.user;

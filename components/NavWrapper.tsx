@@ -1,7 +1,6 @@
-import { Routes } from '@/enum';
 import { auth } from '@/lib';
-import Link from 'next/link';
 import Logo from './shared/Logo';
+import SignInButton from './SignInButton';
 import UserNavInfo from './UserNavInfo';
 
 const NavWrapper = async ({ children }: { children: React.ReactNode }) => {
@@ -13,16 +12,7 @@ const NavWrapper = async ({ children }: { children: React.ReactNode }) => {
         <Logo className="text-foreground" />
         <div className="flex items-center gap-4 flex-wrap">
           {children}
-          {user ? (
-            <UserNavInfo user={user} />
-          ) : (
-            <Link
-              className="text-sm border border-border rounded-md px-4 py-2"
-              href={Routes.SIGN_IN}
-            >
-              Sign in
-            </Link>
-          )}
+          {user ? <UserNavInfo user={user} /> : <SignInButton />}
         </div>
       </nav>
     </header>

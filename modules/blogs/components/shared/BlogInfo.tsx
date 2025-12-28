@@ -19,7 +19,7 @@ const BlogInfo = ({
   return (
     <div className="flex items-center gap-8 text-sm justify-between">
       <div className="flex items-center gap-x-4 gap-y-2 flex-wrap text-muted">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
             <Image
               src={blog[BlogField.AUTHOR][UserField.IMAGE] || '/images/placeholder.jpg'}
@@ -35,7 +35,7 @@ const BlogInfo = ({
             <span>{formatDate(new Date(blog[BlogField.PUBLISHED_AT] || ''))}</span>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           {!cardView && (
             <div className="flex items-center gap-1">
               <FiClock className="w-4 h-4" />
