@@ -9,7 +9,7 @@ const Category = ({ category, index }: { category: ICategory; index: number }) =
   return (
     <Link
       key={category[CategoryField.ID]}
-      href={`${Routes.BLOGS}?category=${category[CategoryField.ID]}`}
+      href={`${Routes.BLOGS}?categoryId=${category[CategoryField.ID]}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
