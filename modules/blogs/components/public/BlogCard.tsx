@@ -29,7 +29,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
           height={1000}
           className="object-cover"
         />
-        <BlogCategoryBadge className="absolute top-4 left-4" category={blog[BlogField.CATEGORY]} />
+        <BlogCategoryBadge className="absolute top-2 left-2" category={blog[BlogField.CATEGORY]} />
         <div className="p-4 grid grid-rows-[1fr_auto] gap-2">
           <h3 className="text-xl font-bold group-hover:text-accent line-clamp-2 leading-tight">
             {blog[BlogField.TITLE]}
