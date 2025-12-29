@@ -1,10 +1,10 @@
+import { blogsMetadata } from '@/metadata';
 import { BlogStatus } from '@/modules/blogs/blog.enum';
 import BlogListing from '@/modules/blogs/components/public/BlogListing';
 import { CategoryStatus } from '@/modules/categories/categories.enum';
 import { blogService } from '@/service/blog.service';
 import { categoryService } from '@/service/category.service';
 import { use } from 'react';
-import { blogsMetadata } from '@/metadata';
 
 export const metadata = blogsMetadata;
 export const dynamic = 'force-dynamic';
