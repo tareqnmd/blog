@@ -2,13 +2,13 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 const AdminBlogsLoading = () => {
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6 overflow-hidden">
       <div className="flex items-center justify-between gap-4 flex-wrap">
-        <div>
-          <Skeleton className="h-8 w-24" />
-          <Skeleton className="h-5 w-64 mt-1" />
+        <div className="min-w-0 flex-1">
+          <Skeleton className="h-8 w-24 max-w-full" />
+          <Skeleton className="h-5 w-64 max-w-full mt-1" />
         </div>
-        <Skeleton className="h-10 w-32 rounded-lg" />
+        <Skeleton className="h-10 w-32 max-w-full rounded-lg shrink-0" />
       </div>
 
       <div className="bg-background rounded-lg shadow overflow-hidden w-full">

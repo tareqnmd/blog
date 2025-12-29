@@ -2,7 +2,7 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 const AdminBlogDetailLoading = () => {
   return (
-    <div className="grid py-8 md:py-12 gap-4 md:gap-6 max-w-4xl mx-auto">
+    <div className="grid py-8 md:py-12 gap-4 md:gap-6 max-w-4xl mx-auto px-4 overflow-hidden">
       <Skeleton className="h-10 w-24" />
 
       <header className="flex flex-col gap-4 md:gap-6">
@@ -15,13 +15,13 @@ const AdminBlogDetailLoading = () => {
 
         <Skeleton className="w-full aspect-video rounded-xl" />
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-wrap">
           <div className="flex items-center gap-2">
-            <Skeleton className="h-8 w-8 rounded-full" />
-            <Skeleton className="h-4 w-32" />
+            <Skeleton className="h-8 w-8 rounded-full shrink-0" />
+            <Skeleton className="h-4 w-32 max-w-full" />
           </div>
-          <Skeleton className="h-4 w-24" />
-          <Skeleton className="h-4 w-24" />
+          <Skeleton className="h-4 w-24 max-w-full" />
+          <Skeleton className="h-4 w-24 max-w-full" />
         </div>
       </header>
 

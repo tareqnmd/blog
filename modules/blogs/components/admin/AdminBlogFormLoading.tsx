@@ -2,7 +2,7 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 const AdminBlogFormLoading = () => {
   return (
-    <div className="grid grid-cols-1 grid-rows-[auto_auto_1fr_auto] gap-6">
+    <div className="grid grid-cols-1 grid-rows-[auto_auto_1fr_auto] gap-6 overflow-hidden">
       <div className="space-y-2">
         <Skeleton className="h-5 w-28" />
         <Skeleton className="h-48 w-full max-w-md rounded-lg" />
@@ -46,9 +46,9 @@ const AdminBlogFormLoading = () => {
       </div>
 
       <div className="space-y-2">
-        <Skeleton className="h-5 w-40" />
+        <Skeleton className="h-5 w-40 max-w-full" />
         <Skeleton className="h-24 w-full rounded-lg" />
-        <Skeleton className="h-4 w-80" />
+        <Skeleton className="h-4 w-80 max-w-full" />
       </div>
 
       <div className="flex justify-end">

@@ -2,10 +2,10 @@ import { Skeleton } from '@/components/ui/Skeleton';
 
 const AdminDashboardLoading = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="rounded-2xl bg-card-background border border-border shadow-sm p-6 mb-6">
-        <Skeleton className="h-9 w-64 mb-2" />
-        <Skeleton className="h-5 w-80" />
+        <Skeleton className="h-9 w-64 max-w-full mb-2" />
+        <Skeleton className="h-5 w-80 max-w-full" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
