@@ -2,11 +2,11 @@ import { APP_CONFIG, BASE_URL } from '@/constant';
 import { Routes } from '@/enum';
 import { Metadata } from 'next';
 
-const blogsTitle = `Blogs - ${APP_CONFIG.name}`;
+const blogsTitle = 'All Blogs';
 const blogsDescription = `Explore blogs on ${APP_CONFIG.name}. Discover insights, tips, and latest updates from ${APP_CONFIG.author}.`;
 
 export const blogsMetadata: Metadata = {
-  title: 'Blogs',
+  title: blogsTitle,
   description: blogsDescription,
   alternates: {
     canonical: Routes.BLOGS,

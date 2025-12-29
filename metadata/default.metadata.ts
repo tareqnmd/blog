@@ -2,10 +2,7 @@ import { APP_CONFIG, BASE_URL } from '@/constant';
 import { Metadata } from 'next';
 
 export const defaultMetadata: Metadata = {
-  title: {
-    default: APP_CONFIG.name,
-    template: `%s - ${APP_CONFIG.name}`,
-  },
+  title: APP_CONFIG.name,
   description: APP_CONFIG.description,
   authors: [{ name: APP_CONFIG.author, url: 'https://tareqnmd.com' }],
   metadataBase: new URL(BASE_URL),
