@@ -7,6 +7,8 @@ const APP_DESCRIPTION =
   `Welcome to ${APP_NAME}. Discover insights, tips, and latest updates from ${APP_AUTHOR}.`;
 const APP_THEME_COLOR = process.env[EnvField.NEXT_PUBLIC_APP_THEME_COLOR] || '#020817';
 const APP_VERSION = process.env[EnvField.NEXT_PUBLIC_APP_VERSION] || '1.0.0';
+const APP_AUTHOR_URL = 'https://tareqnmd.com';
+const APP_AUTHOR_IMAGE = '/images/meta/author.webp';
 
 export const APP_CONFIG = {
   name: APP_NAME,
@@ -14,4 +16,6 @@ export const APP_CONFIG = {
   themeColor: APP_THEME_COLOR,
   version: APP_VERSION,
   author: APP_AUTHOR,
+  authorUrl: APP_AUTHOR_URL,
+  authorImage: APP_AUTHOR_IMAGE,
 } as const;

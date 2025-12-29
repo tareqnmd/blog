@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 export const defaultMetadata: Metadata = {
   title: APP_CONFIG.name,
   description: APP_CONFIG.description,
-  authors: [{ name: APP_CONFIG.author, url: 'https://tareqnmd.com' }],
+  authors: [{ name: APP_CONFIG.author, url: APP_CONFIG.authorUrl }],
   metadataBase: new URL(BASE_URL),
   creator: APP_CONFIG.author,
   publisher: APP_CONFIG.author,
@@ -25,5 +25,10 @@ export const defaultMetadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  },
+  other: {
+    'author:image': APP_CONFIG.authorImage,
+    'author:url': APP_CONFIG.authorUrl,
+    'author:name': APP_CONFIG.author,
   },
 };
