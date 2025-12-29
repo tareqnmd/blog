@@ -18,7 +18,7 @@ const Category = ({ category, index }: { category: ICategory; index: number }) =
         whileHover={{
           scale: 1.025,
         }}
-        className="flex items-center justify-center gap-3 px-6 py-2.5 bg-card-background border border-border rounded-xl"
+        className="flex items-center justify-center gap-3 px-6 py-2.5 bg-card-background rounded-xl overflow-hidden hover:shadow transition-all group"
       >
         <Image
           src={category[CategoryField.ICON]}
