@@ -34,10 +34,10 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
           <h3 className="text-xl font-bold group-hover:text-accent line-clamp-2 leading-tight">
             {blog[BlogField.TITLE]}
           </h3>
-          <p
+          <div
             dangerouslySetInnerHTML={{ __html: blog[BlogField.CONTENT] || 'Read more...' }}
             className="text-muted text-sm line-clamp-2 leading-relaxed"
-          ></p>
+          ></div>
           <div className="flex flex-col gap-2">
             <hr className="border-border/50 my-1 mt-auto" />
             <BlogInfo cardView blog={blog} hideShare={true} />

@@ -40,6 +40,12 @@ const FeaturedBlog = ({ blog }: { blog: IBlog }) => {
                   >
                     <BlogCategory category={blog[BlogField.CATEGORY]} />
                     <BlogTitle className="group-hover:text-accent" title={blog[BlogField.TITLE]} />
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: blog[BlogField.CONTENT] || 'Read more...',
+                      }}
+                      className="text-muted text-sm line-clamp-2 leading-relaxed"
+                    ></div>
                     <BlogInfo blog={blog} hideShare={true} />
                   </motion.div>
                 </div>
