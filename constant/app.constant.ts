@@ -1,6 +1,8 @@
 import { EnvField } from '@/enum';
 
-const APP_AUTHOR = process.env[EnvField.NEXT_PUBLIC_APP_AUTHOR] || 'Tareq';
+const APP_AUTHOR = process.env[EnvField.NEXT_PUBLIC_APP_AUTHOR] || 'Md Tareq';
+const APP_AUTHOR_USERNAME = 'tareqnmd';
+const APP_AUTHOR_HANDLE = '@tareqnmd';
 const APP_NAME = process.env[EnvField.NEXT_PUBLIC_APP_NAME] || 'Blog';
 const APP_TAGLINE = 'Ideas worth sharing';
 const APP_DESCRIPTION =
@@ -20,4 +22,6 @@ export const APP_CONFIG = {
   author: APP_AUTHOR,
   authorUrl: APP_AUTHOR_URL,
   authorImage: APP_AUTHOR_IMAGE,
+  authorUsername: APP_AUTHOR_USERNAME,
+  authorHandle: APP_AUTHOR_HANDLE,
 } as const;

@@ -6,7 +6,7 @@ export const defaultMetadata: Metadata = {
   description: APP_CONFIG.description,
   authors: [{ name: APP_CONFIG.author, url: APP_CONFIG.authorUrl }],
   metadataBase: new URL(BASE_URL),
-  creator: APP_CONFIG.author,
+  creator: APP_CONFIG.authorHandle,
   publisher: APP_CONFIG.author,
   alternates: {
     canonical: '/',
@@ -14,14 +14,16 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     title: APP_CONFIG.name,
     description: APP_CONFIG.description,
+    siteName: APP_CONFIG.name,
     images: ['/images/meta/og-image.png'],
-    authors: ['Tareq'],
+    authors: [APP_CONFIG.authorUrl, APP_CONFIG.authorHandle],
   },
   twitter: {
     card: 'summary_large_image',
     title: APP_CONFIG.name,
     description: APP_CONFIG.description,
     images: ['/images/meta/og-image.png'],
+    creator: APP_CONFIG.authorHandle,
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
@@ -30,5 +32,6 @@ export const defaultMetadata: Metadata = {
     'author:image': APP_CONFIG.authorImage,
     'author:url': APP_CONFIG.authorUrl,
     'author:name': APP_CONFIG.author,
+    'author:username': APP_CONFIG.authorUsername,
   },
 };
